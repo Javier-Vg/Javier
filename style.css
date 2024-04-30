@@ -2,6 +2,8 @@
     width: 33px;
     height: 33px;
     margin-top: 17px;
+    /*fill cambia el color para los archivos tipo SVG de imagenes o logos*/
+    fill: #000b;
 }
 .h3-encab{
     font-size: 26px;
@@ -237,8 +239,8 @@ hr{
 .circulos{
     width: 20px;
     height: 20px;
-    margin-top: 19px;
-    margin-left: 15px;
+    margin-top: 5px;
+    margin-left: 17px;
     border-radius: 50%;
     background-color: #000b;
 }
@@ -278,10 +280,11 @@ hr{
 }
 
 .iconos-seccion3{
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     margin-top: 23px;
     margin-left: 34px;
+    fill: #000b;
 }
 
 .DivCore{
