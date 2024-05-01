@@ -66,24 +66,24 @@ h3{
 
 .sub-contenedor1{
     display: grid;
-    grid-template-columns: 40px 100px;
-    text-align: center;
-    margin-left: 200px;
+    grid-template-columns: 40px 200px;
+    text-align: right;
+    margin-left: 185px;
 }
 
 .sub-contenedor2{
     display: grid;
     grid-template-columns: 20px 100px;
-    text-align: center;
-    margin-left: 320px;
+    text-align: right;
+    margin-left: 300px;
 }
 
 .sub-contenedor3{
     display: grid;
     grid-template-columns: 25px 150px;
     grid-template-rows: 10px 10px;
-    text-align: center;
-    margin-left: 265px;
+    text-align: right;
+    margin-left: 245px;
 }
 
 .cajas1:nth-child(1){
@@ -241,13 +241,14 @@ h3{
     display: grid;
     grid-template-columns: 200px 200px;
     grid-template-rows: 35px 35px 35px 35px;
-    margin-left: 30px;
+    margin-left: 10px;
     transition: box-shadow 1s;
+    
 }
 
 .sub-contenedor7:hover{
     box-shadow: 10px 2px 10px 5px;
-    width: 450;
+    
     
 }
 
@@ -423,7 +424,7 @@ h3{
     overflow: auto;
 	background: rgba(0,0,0,0.5);
 	width: 100%;
-	/*AJUSTA ESTO CUANDO YA TENGAS LOS INPUTS*/height: 1000px;
+	height: 1000px;
 	top: 0;
     left: 0;
 	transition: all 500ms ease;
@@ -439,7 +440,7 @@ h3{
 	width: 100%;
 	max-width: 250px;
 	background: #1c1c1c;
-	height: 2000px;
+	height: 4120px;
 	position: relative;
 	transition: all 500ms ease;
 	transform: translateX(-100%);
@@ -499,11 +500,36 @@ h5{
     margin-top: 15px;
     
 }
-#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9 #input10, #input11, #input12, #input13, #input14, #input15, #input16{
+#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10, #input11, #input12, #input13, #input14, #input15, #input16, #input17, #input18, #input19, #input20, #input21, #input22, #input23, #input24, #input25, #input26, #input27, #input28, #input29, #input30, #input32, #input34{
     margin-left: 10px;
+    background-color: #48e;
+    color: white;
+    border-color: #fff;
+}
 
+#input31, #input33, #input35{
+    border-color: #48e;
+    margin-left: 10px;
+    
+    
 }
 
 .hr-menu{
     width: 110;
+}
+
+#btn1{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 40px;
+    margin-left: 45px;
+    font-family: fuenteNueva;
+    font-size: 30px;
+
+}
+#btn1:hover{
+    background-color: #48e ;
+    border-color: white;
+    color: #fff;
 }
