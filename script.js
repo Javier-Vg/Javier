@@ -92,30 +92,30 @@ let cont_labor12 = document.getElementById("cont-l12");
 
 //SKILLS
 let hab1 = document.getElementById("input30");
-let rango1 = document.getElementById("input31");
+let rango1 = document.querySelector(".input31");
 let cont_text1 = document.getElementById("cont-hab1");
-let tier_hab1 = document.getElementById("cont-bola1");
+let cont_bola1 = document.getElementById("cont-bola1");
 
 let hab2 = document.getElementById("input32");
-let rango2 = document.getElementById("input33");
+let rango2 = document.querySelector(".input33");
 let cont_text2 = document.getElementById("cont-hab2");
-let tier_hab2 = document.getElementById("cont-bola2");
+let cont_bola2 = document.getElementById("cont-bola2");
 
 let hab3 = document.getElementById("input34");
-let rango3 = document.getElementById("input35");
+let rango3 = document.querySelector(".input35");
 let cont_text3 = document.getElementById("cont-hab3");
-let tier_hab3 = document.getElementById("cont-bola3");
+let cont_bola3 = document.getElementById("cont-bola3");
 
 let hab4 = document.getElementById("input36");
-let rango4 = document.getElementById("input37");
+let rango4 = document.querySelector(".input37");
 let cont_text4 = document.getElementById("cont-hab4");
-let tier_hab4 = document.getElementById("cont-bola4");
+let cont_bola4 = document.getElementById("cont-bola4");
 
-let lista_rangos = [rango1,rango2,rango3];
 
 let btn1 = document.getElementById("btn1");
 
 btn1.addEventListener("click", function(){
+
     cont_nom.innerHTML = nombre.value;
     cont_maestria.innerHTML = maestria.value;
     cont_correo.innerHTML = correo.value;
@@ -151,39 +151,393 @@ btn1.addEventListener("click", function(){
     cont_text3.innerHTML = hab3.value;
     cont_text4.innerHTML = hab4.value;
 
-    /*
-    for (let i = 0; index < lista_rangos.length; i++) {
-        if (lista_rangos[i] == 1) {
-            const bola = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            
-        } else if(lista_rangos[i] == 2){
-            const bola = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola2 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            
-        }else if(lista_rangos[i] == 3){
-            const bola = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola2 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola3 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
 
-        }else if(lista_rangos[i] == 4){
-            const bola = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola2 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola3 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola4= document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
+    //Elimina los iconos circulo para luego agregar nuevos.
+    document.getElementById("contenedorsito1").remove();
+    document.getElementById("contenedorsito2").remove();
+    document.getElementById("contenedorsito3").remove();
+    document.getElementById("contenedorsito4").remove();
 
-        }else if (lista_rangos[i] == 5) {
+    //Se convierte de texto a numero
+    let rang1 = parseInt(rango1.value);
+    let rang2 = parseInt(rango2.value);
+    let rang3 = parseInt(rango3.value);
+    let rang4 = parseInt(rango4.value);
+  
+    //Se integran a la lista
+    let lista_rangos = [rang1,rang2,rang3,rang4];
 
-            const bola = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola2 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola3 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola4 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-            const bola5 = document.createElement( <img class="circulos" src="img/lavado-en-seco.png"></img>);
-        }else{
+
+    
+    for (let i = 0; i < 4; i++) {
+        console.log("entro al for");
+        if (i == 0) {
+            console.log("entro a la condicional 1");
+            if (lista_rangos[i] == 1) {
+                console.log("entro a la condicional 2")
+                const bola = document.createElement("img");
+    
+                // Establece la ruta de la imagen
+                bola.src = "img/lavado-en-seco.png";
+                // Añade clase a la imagen 
+                bola.classList.add("circulos");
+    
+                //Integra el icono de la bola al navegador
+                cont_bola1.appendChild(bola);
+    
+            } else if(lista_rangos[i] == 2){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+    
+                cont_bola1.appendChild(bola);
+                cont_bola1.appendChild(bola2);
+                
+            }else if(lista_rangos[i] == 3){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement( "img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+    
+                cont_bola1.appendChild(bola);
+                cont_bola1.appendChild(bola2);
+                cont_bola1.appendChild(bola3);
+
+                console.log("no debe de entrar aqui")
             
-        }
+    
+            }else if(lista_rangos[i] == 4){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4= document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+    
+                cont_bola1.appendChild(bola);
+                cont_bola1.appendChild(bola2);
+                cont_bola1.appendChild(bola3);
+                cont_bola1.appendChild(bola4);
+
+                console.log("hoy de entrar aqui")
+    
+            }else if (lista_rangos[i] >= 5) {
+                
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4 = document.createElement("img");
+                const bola5 = document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+                bola5.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+                bola5.classList.add("circulos");
+                
+                cont_bola1.appendChild(bola);
+                cont_bola1.appendChild(bola2);
+                cont_bola1.appendChild(bola3);
+                cont_bola1.appendChild(bola4);
+                cont_bola1.appendChild(bola5);
+                console.log("no debe de entrar aqui");
+    
+            }else if(lista_rangos[i] <= 0){
+                continue;
+            }
+        }else if(i == 1){
+            if (lista_rangos[i] == 1) {
+                const bola = document.createElement("img");
+                bola.src = "img/lavado-en-seco.png";
+                bola.classList.add("circulos");
+                cont_bola2.appendChild(bola);
+    
+            } else if(lista_rangos[i] == 2){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+    
+                cont_bola2.appendChild(bola);
+                cont_bola2.appendChild(bola2);
+                
+            }else if(lista_rangos[i] == 3){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement( "img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+    
+                cont_bola2.appendChild(bola);
+                cont_bola2.appendChild(bola2);
+                cont_bola2.appendChild(bola3);
+            
+    
+            }else if(lista_rangos[i] == 4){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4= document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+    
+                cont_bola2.appendChild(bola);
+                cont_bola2.appendChild(bola2);
+                cont_bola2.appendChild(bola3);
+                cont_bola2.appendChild(bola4);
+    
+            }else if (lista_rangos[i] >= 5) {
+                
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4 = document.createElement("img");
+                const bola5 = document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+                bola5.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+                bola5.classList.add("circulos");
+                
+                cont_bola2.appendChild(bola);
+                cont_bola2.appendChild(bola2);
+                cont_bola2.appendChild(bola3);
+                cont_bola2.appendChild(bola4);
+                cont_bola2.appendChild(bola5);
+    
+            }else if(lista_rangos[i] <= 0){
+                continue;
+            }
+        }else if(i == 2){
+            if (lista_rangos[i] == 1) {
+                const bola = document.createElement("img");
+    
+                // Establece la ruta de la imagen
+                bola.src = "img/lavado-en-seco.png";
+                // Añade clase a la imagen 
+                bola.classList.add("circulos");
+    
+                //Integra el icono de la bola al navegador
+                //ESTA VARA VARIA MUCHOOOOOOOOOOOOO
+                cont_bola3.appendChild(bola);
+    
+            } else if(lista_rangos[i] == 2){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+    
+                cont_bola3.appendChild(bola);
+                cont_bola3.appendChild(bola2);
+                
+            }else if(lista_rangos[i] == 3){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement( "img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+    
+                cont_bola3.appendChild(bola);
+                cont_bola3.appendChild(bola2);
+                cont_bola3.appendChild(bola3);
+            
+    
+            }else if(lista_rangos[i] == 4){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4= document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+    
+                cont_bola3.appendChild(bola);
+                cont_bola3.appendChild(bola2);
+                cont_bola3.appendChild(bola3);
+                cont_bola3.appendChild(bola4);
+    
+            }else if (lista_rangos[i] >= 5) {
+                
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4 = document.createElement("img");
+                const bola5 = document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+                bola5.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+                bola5.classList.add("circulos");
+                
+                cont_bola3.appendChild(bola);
+                cont_bola3.appendChild(bola2);
+                cont_bola3.appendChild(bola3);
+                cont_bola3.appendChild(bola4);
+                cont_bola3.appendChild(bola5);
+    
+            }else if(lista_rangos[i] <= 0){
+                continue;
+            }
+        }else if(i == 3){
+            if (lista_rangos[i] == 1) {
+                const bola = document.createElement("img");
+
+                bola.src = "img/lavado-en-seco.png";
+                bola.classList.add("circulos");
+                cont_bola4.appendChild(bola);
+    
+            } else if(lista_rangos[i] == 2){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+    
+                cont_bola4.appendChild(bola);
+                cont_bola4.appendChild(bola2);
+                
+            }else if(lista_rangos[i] == 3){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement( "img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+    
+                cont_bola4.appendChild(bola);
+                cont_bola4.appendChild(bola2);
+                cont_bola4.appendChild(bola3);
+            
+    
+            }else if(lista_rangos[i] == 4){
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4= document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+    
+                cont_bola4.appendChild(bola);
+                cont_bola4.appendChild(bola2);
+                cont_bola4.appendChild(bola3);
+                cont_bola4.appendChild(bola4);
+    
+            }else if (lista_rangos[i] >= 5) {
+                
+                const bola = document.createElement("img");
+                const bola2 = document.createElement("img");
+                const bola3 = document.createElement("img");
+                const bola4 = document.createElement("img");
+                const bola5 = document.createElement("img");
+    
+                bola.src = "img/lavado-en-seco.png";
+                bola2.src = "img/lavado-en-seco.png";
+                bola3.src = "img/lavado-en-seco.png";
+                bola4.src = "img/lavado-en-seco.png";
+                bola5.src = "img/lavado-en-seco.png";
+    
+                bola.classList.add("circulos");
+                bola2.classList.add("circulos");
+                bola3.classList.add("circulos");
+                bola4.classList.add("circulos");
+                bola5.classList.add("circulos");
+                
+                cont_bola4.appendChild(bola);
+                cont_bola4.appendChild(bola2);
+                cont_bola4.appendChild(bola3);
+                cont_bola4.appendChild(bola4);
+                cont_bola4.appendChild(bola5);
+    
+            }else if(lista_rangos[i] <= 0){
+                continue;
+            }
+        }   
     }
-    */
 });
+
 
 
 
