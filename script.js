@@ -170,11 +170,10 @@ btn1.addEventListener("click", function(){
 
     
     for (let i = 0; i < 4; i++) {
-        console.log("entro al for");
+        
         if (i == 0) {
             console.log("entro a la condicional 1");
             if (lista_rangos[i] == 1) {
-                console.log("entro a la condicional 2")
                 const bola = document.createElement("img");
     
                 // Establece la ruta de la imagen
