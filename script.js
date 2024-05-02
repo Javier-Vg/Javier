@@ -358,13 +358,10 @@ btn1.addEventListener("click", function(){
             if (lista_rangos[i] == 1) {
                 const bola = document.createElement("img");
     
-                // Establece la ruta de la imagen
+                
                 bola.src = "img/lavado-en-seco.png";
-                // Añade clase a la imagen 
                 bola.classList.add("circulos");
-    
-                //Integra el icono de la bola al navegador
-                //ESTA VARA VARIA MUCHOOOOOOOOOOOOO
+
                 cont_bola3.appendChild(bola);
     
             } else if(lista_rangos[i] == 2){
