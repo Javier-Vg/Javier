@@ -239,7 +239,7 @@ h3{
 
 .sub-contenedor7{
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 200px 250px;
     grid-template-rows: 35px 35px 35px 35px;
     margin-left: 10px;
     transition: box-shadow 1s;
@@ -338,13 +338,15 @@ h3{
 
 /*Empieza el menu desplegable*/
 	/*Estilos para el encabezado*/
+
 .header{
-	width: 20%;
-	height: 100px;
-	position: fixed;
-	top: 0;
+    width: 20%;
+    height: 100px;
+    position: fixed;
+    top: 0;
     left: 0;
 }
+    
 
 .container{
 	width: 90%;
@@ -354,7 +356,7 @@ h3{
 
 .container .btn-menu, .logo{
 	float: left;
-	line-height:100px;
+	
 }
 
 .container .btn-menu label{
@@ -371,7 +373,7 @@ h3{
     font-family: fuenteNueva;
 }
 
-/*Fin de Estilos para el encabezado*/
+ /*Fin de Estilos para el encabezado*/
 
 /*Menù lateral*/
 #btn-menu{
@@ -391,9 +393,11 @@ h3{
 	opacity: 0;
 	visibility: hidden;
 }
+
 #btn-menu:checked ~ .container-menu{
 	opacity: 1;
 	visibility: visible;
+    
 }
 
 .cont-menu{

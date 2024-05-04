@@ -159,11 +159,12 @@ btn1.addEventListener("click", function(){
     document.getElementById("contenedorsito4").remove();
 
     //Se convierte de texto a numero
+    
     let rang1 = parseInt(rango1.value);
     let rang2 = parseInt(rango2.value);
     let rang3 = parseInt(rango3.value);
     let rang4 = parseInt(rango4.value);
-  
+    
     //Se integran a la lista
     let lista_rangos = [rang1,rang2,rang3,rang4];
 
@@ -532,6 +533,11 @@ btn1.addEventListener("click", function(){
             }
         }   
     }
+
+
+
+    const cont_img = document.querySelector(".myself");
+    cont_img.src = "img/2k23.webp"
 });
 
 
